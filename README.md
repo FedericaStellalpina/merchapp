@@ -2,8 +2,15 @@
 
 ```
 # Requirements
+# Linux
 sudo gem install sinatra
 sudo gem install sqlite3
+
+# MacOS
+brew install ruby
+brew gem install sinatra
+brew gem install sqlite3
+
 
 # Start the app:
 ruby app.rb
