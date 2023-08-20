@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Table</title>
+    <style>
+body {
+    height: 100vh; /* Viewport Height: Make sure body takes full screen height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    font-family: Arial, sans-serif; /* Just to make the table text look better */
+}
+
+table {
+    border-collapse: collapse; /* Collapse cell borders */
+    width: 50%; /* Example width, adjust as needed */
+}
+
+table, th, td {
+    border: 1px solid black; /* Add border to table and cells */
+}
+
+th, td {
+    padding: 8px 12px; /* Padding for cells */
+    text-align: left; /* Align text to the left */
+}
+    </style>
+</head>
+<body>
+<form action="/" method="post">
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Size</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Expected</th>
+    <th>Count</th>
+    <th>Sold</th>
+    <th>Remaining</th>
+    <th>Total</th>
+    <th>-</th>
+  </tr>
+
+  <% data_rows.each do |data_row| %>
+  <tr>
+    <td><%= data_row.item %></td>
+    <td><%= data_row.size %></td>
+    <td><%= data_row.type %></td>
+    <td><%= data_row.price %></td>
+    <td><%= data_row.expected %></td>
+    <td><%= data_row.count %></td>
+    <td>n/a</td>
+    <td>n/a</td>
+    <td>n/a</td>
+    <td>-</td>
+  </tr>
+  <% end %>
+
+  <tr>
+      <td><input type="text" name="item" placeholder="Item"></td>
+      <td><input type="text" name="size" placeholder=""></td>
+      <td><input type="text" name="type" placeholder="Enter country"></td>
+      <td><input type="text" name="price" placeholder="Enter country"></td>
+      <td><input type="text" name="expected" placeholder="Enter country"></td>
+      <td><input type="text" name="count" placeholder="Enter country"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td colspan="3"><input type="submit" value="Submit"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
