@@ -14,6 +14,9 @@ brew gem install sqlite3
 
 # Start the app:
 ruby app.rb
+
+#Contact point:
+Slack - workspace: codingprojects
 ```
 
 ```
@@ -23,3 +26,15 @@ ruby app.rb
 - have a way to edit
 - button for sold
 ```
+Update 2024.05.12
+
+Done:
+- have a delet button
+- have a way to edit
+
+Still to do:
+- calculate fields
+- button for sold
+- review basic UI
+- run a first test for MVP
+
