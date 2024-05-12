@@ -25,7 +25,7 @@ Slack - workspace: codingprojects
 - have a delet button
 - have a way to edit
 - button for sold
-```
+
 Update 2024.05.12
 
 Done:
@@ -37,4 +37,4 @@ Still to do:
 - button for sold
 - review basic UI
 - run a first test for MVP
-
+```
