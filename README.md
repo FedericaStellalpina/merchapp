@@ -26,10 +26,10 @@ Slack - workspace: codingprojects
 - have a way to edit
 - button for sold
 
-Update 2024.05.12
+Update 2025.11.30
 
 Done:
-- have a delet button
+- have a delete button
 - have a way to edit
 
 Still to do:
