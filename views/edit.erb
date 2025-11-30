@@ -30,7 +30,7 @@ th, td {
     </style>
 </head>
 <body>
-<form action="/" method="post">
+<form action="/edit" method="post">
 <table>
   <tr>
     <th>ID</th>
@@ -46,7 +46,7 @@ th, td {
     <th>-</th>
   </tr>
 
-  <% data_rows.each do |data_row| %>
+  <% data_rows_up.each do |data_row| %>
   <tr>
     <td><%= data_row.id %></td>
     <td><%= data_row.item %></td>
@@ -61,7 +61,7 @@ th, td {
     <td><a href="/delete?id=<%= data_row.id %>">delete</a> <a href="/edit?id=<%= data_row.id %>">edit</a></td>
   </tr>
   <% end %>
-
+  <!-- edit ------------------->
   <tr>
       <td></td>
       <td><input type="text" name="item" placeholder="Item"></td>
@@ -73,8 +73,24 @@ th, td {
       <td></td>
       <td></td>
       <td></td>
-      <td colspan="3"><input type="submit" name= "button1" value="Create"></td>
+      <td colspan="3"><input type="submit" name = "button1" value="Edit"><input type="hidden" name="id_ed" value="<%= id %>"></td>
     </tr>
+  <!-- edit ------------------->
+  <% data_rows_down.each do |data_row| %>
+  <tr>
+    <td><%= data_row.id %></td>
+    <td><%= data_row.item %></td>
+    <td><%= data_row.size %></td>
+    <td><%= data_row.type %></td>
+    <td><%= data_row.price %></td>
+    <td><%= data_row.expected %></td>
+    <td><%= data_row.count %></td>
+    <td>n/a</td>
+    <td>n/a</td>
+    <td>n/a</td>
+    <td><a href="/delete?id=<%= data_row.id %>">delete</a> <a href="/edit?id=<%= data_row.id %>">edit</a></td>
+  </tr>
+  <% end %>
 </table>
 </form>
 </body>
